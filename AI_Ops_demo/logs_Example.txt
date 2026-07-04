@@ -1,0 +1,390 @@
+Example Log Classification
+Log Class
+Priority
+Example Log
+What it Means
+Disk
+P0
+EXT4-fs error: unable to read superblock
+Filesystem corruption
+
+
+P0
+No space left on device
+Disk completely full
+
+
+P1
+SMART: Disk predicted failure
+Hardware failure imminent
+
+
+P1
+I/O error on device sda
+Disk becoming unreadable
+
+
+P2
+Filesystem mounted read-only due to errors
+Writes blocked
+
+
+P2
+Disk latency exceeded 200ms
+Severe performance degradation
+
+
+P3
+Filesystem usage 90%
+Capacity warning
+
+
+P4
+Filesystem check completed successfully
+Informational
+
+
+P5
+Disk cache flushed
+Debug
+
+
+Log Class
+Priority
+Example Log
+Meaning
+Network
+P0
+Kernel: Network interface eth0 DOWN
+Lost network
+
+
+P0
+Default gateway unreachable
+Server isolated
+
+
+P1
+Packet loss 60% detected
+Major connectivity issue
+
+
+P1
+DNS resolution failed for database endpoint
+Dependencies unavailable
+
+
+P2
+Connection timeout to payment API
+External service issue
+
+
+P2
+TCP retransmission rate high
+Congestion
+
+
+P3
+Network utilization exceeded 85%
+Capacity warning
+
+
+P4
+DHCP lease renewed
+Informational
+
+
+P5
+TCP connection established
+Debug networking
+
+
+Log Class
+Priority
+Example Log
+Meaning
+CPU
+P0
+Kernel panic due to CPU machine check exception
+CPU hardware failure
+
+
+P1
+CPU usage sustained at 100% for 10 min
+System unusable
+
+
+P1
+Load average exceeded 50
+Extreme overload
+
+
+P2
+CPU throttling due to thermal limits
+Performance reduced
+
+
+P2
+Run queue length exceeded threshold
+Scheduling delays
+
+
+P3
+CPU utilization 85%
+Warning
+
+
+P4
+CPU governor switched to performance
+Informational
+
+
+P5
+Thread execution time 2ms
+Debug metrics
+
+
+Log Class
+Priority
+Example Log
+Meaning
+Application
+P0
+Application crashed with SIGSEGV
+App down
+
+
+P0
+Unhandled exception caused process termination
+Service unavailable
+
+
+P1
+Worker pool exhausted
+Requests failing
+
+
+P1
+OutOfMemoryError
+Service unstable
+
+
+P2
+API latency exceeded SLA (3s)
+Slow responses
+
+
+P2
+Retry limit exceeded for downstream service
+Dependency failing
+
+
+P3
+Cache miss rate increased to 60%
+Efficiency issue
+
+
+P4
+Application startup completed
+Info
+
+
+P5
+Entering function ProcessInvoice()
+Debug trace
+
+
+Log Class
+Priority
+Example Log
+Meaning
+Access Logs
+P0
+100% HTTP 500 responses
+Total outage
+
+
+P1
+HTTP 503 rate exceeded 30%
+Major outage
+
+
+P1
+Authentication service unavailable
+Login broken
+
+
+P2
+Spike in HTTP 429 responses
+Rate limiting
+
+
+P2
+Repeated failed login attempts from IP
+Possible attack
+
+
+P3
+404 requests increased
+Broken links
+
+
+P4
+GET /health 200 OK
+Normal request
+
+
+P5
+Request headers logged
+Debug
+
+
+Log Class
+Priority
+Example Log
+Meaning
+System Events
+P0
+Kernel panic
+OS crash
+
+
+P0
+OOM Killer terminated critical process
+Service outage
+
+
+P1
+System rebooted unexpectedly
+Unexpected restart
+
+
+P1
+Memory ECC errors detected
+Hardware fault
+
+
+P2
+Service nginx exited unexpectedly
+Single service affected
+
+
+P2
+Clock synchronization failed
+Time drift
+
+
+P3
+Swap usage exceeded 80%
+Memory pressure
+
+
+P4
+User login successful
+Audit event
+
+
+P5
+Cron job executed
+Routine event
+
+
+Log Class
+Priority
+Example Log
+Meaning
+GPU / NPU
+P0
+GPU device lost
+Accelerator unavailable
+
+
+P0
+CUDA driver crashed
+AI inference stopped
+
+
+P1
+GPU out of memory
+Model cannot run
+
+
+P1
+NPU firmware failure
+Accelerator malfunction
+
+
+P2
+CUDA kernel timeout
+Long-running computation failed
+
+
+P2
+GPU utilization stuck at 100%
+Saturation
+
+
+P3
+GPU temperature exceeded 85°C
+Thermal warning
+
+
+P4
+CUDA context initialized
+Informational
+
+
+P5
+Tensor allocated on GPU
+Debug
+
+
+Log Class
+Priority
+Example Log
+Meaning
+Database Logs
+P0
+Database unavailable
+DB down
+
+
+P0
+WAL corruption detected
+Data integrity issue
+
+
+P1
+Replication stopped
+HA compromised
+
+
+P1
+Too many database connections
+Service degraded
+
+
+P2
+Deadlock detected
+Transaction issue
+
+
+P2
+Slow query exceeded 10s
+Performance problem
+
+
+P3
+Connection pool usage 90%
+Capacity warning
+
+
+P4
+Checkpoint completed
+Routine maintenance
+
+
+P5
+Prepared statement executed
+Debug
+
